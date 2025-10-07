@@ -1,0 +1,53 @@
+*{margin: 0; padding: 0; box-sizing: border-box;} /* a doboz mérete nem no csak a benne lévo dolgok mennek ossza ha kap peddinget */
+
+body{
+    background-color: hsl(195, 46%, 35%); 
+}
+.boxes{
+    height: 100vw   ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+section{
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    height: max(40vw, 23rem);
+    width: max(40vw, 23rem);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  
+    grid-template-rows: repeat(6, 1fr);  
+    gap: 1rem;
+    justify-items: center; /*az egyes grid-gyermek-elemek*/
+    justify-content: center; /*a grid a gyermek elemeinek osszegsége*/
+    align-items: center; /*az egyes grid-gyermek-elemek*/
+    align-content: center; /*a grid a gyermek elemeinek osszegsége*/
+}
+
+article:nth-child(3){
+    scale: .9; /*méretezés*/
+    cursor: pointer;
+    user-select: none; /*nem tudod kijelolni vagyis kijelolni!*/
+}
+
+article{
+    border: 1px solid rgba(0, 0,0, .5);    /* méret stílus szin */ /* eroseg */
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(233, 68, 68) 18%,rgb(172, 230, 106)56%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale .2s; /* novekedés átmenete egyletesebb lesz.*/
+    
+}
+
+article:hover{
+    box-shadow: 0 0 10px 5px  rgb(99, 99, 100);    /* vízszint fuggoleges elmosodas meg a meret szin */
+}
+
+article:active{
+    scale: 1.1;
+}

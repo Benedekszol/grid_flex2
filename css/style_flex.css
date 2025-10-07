@@ -1,0 +1,39 @@
+*{margin: 0; padding: 0; box-sizing: border-box;} /* a doboz mérete nem no csak a benne lévo dolgok mennek ossza ha kap peddinget */
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center; /*mindig mukodik */
+    align-content: center;   /*csak tobbsorba tordlet tartalomnal mudodik. align item az egészet egybe mozgatja a aling contetnt meg mindent kozepre akar */
+    justify-content: center;
+    
+}
+
+article:nth-child(3){
+    scale: .9; /*méretezés*/
+    cursor: pointer;
+    user-select: none; /*nem tudod kijelolni vagyis kijelolni!*/
+}
+
+article{
+    border: 1px solid rgba(0, 0,0, .5);    /* méret stílus szin */ /* eroseg */
+    width: 6vw;
+    height: 6vw;
+    background: radial-gradient(rgb(233, 68, 68) 18%,rgb(172, 230, 106)56%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale .2s; /* novekedés átmenete egyletesebb lesz.*/
+    
+}
+
+article:hover{
+    box-shadow: 0 0 10px 5px  rgb(99, 99, 100);    /* vízszint fuggoleges elmosodas meg a meret szin */
+}
+
+article:active{
+    scale: 1.1;
+}
